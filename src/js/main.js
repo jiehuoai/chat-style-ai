@@ -280,6 +280,168 @@ document.addEventListener('DOMContentLoaded', function() {
                     listStyleType: 'square'
                 }
             }
+        },
+        cute: {
+            name: '可爱少女',
+            styles: {
+                container: {
+                    fontFamily: "'PingFang SC', 'Microsoft YaHei', sans-serif",
+                    lineHeight: '1.8',
+                    color: '#594d4d',
+                    padding: '25px',
+                    backgroundColor: '#fff5f5',
+                    borderRadius: '12px',
+                    border: '2px solid #ffb6c1',
+                    boxShadow: '0 4px 12px rgba(255, 182, 193, 0.2)'
+                },
+                heading: {
+                    fontWeight: 'bold',
+                    margin: '1.2em 0 0.8em',
+                    color: '#ff8ba7',
+                    textAlign: 'center',
+                    background: 'linear-gradient(120deg, #ffd1d1 0%, #ffd1d1 100%)',
+                    backgroundRepeat: 'no-repeat',
+                    backgroundSize: '100% 0.3em',
+                    backgroundPosition: '0 88%',
+                    padding: '0 0.5em'
+                },
+                link: {
+                    color: '#ff8ba7',
+                    textDecoration: 'none',
+                    borderBottom: '2px dotted #ff8ba7'
+                },
+                list: {
+                    paddingLeft: '1.8em',
+                    margin: '0.8em 0',
+                    listStyleType: '🌸'
+                }
+            }
+        },
+        lifestyle: {
+            name: '生活方式',
+            styles: {
+                container: {
+                    fontFamily: "'PingFang SC', 'Microsoft YaHei', sans-serif",
+                    lineHeight: '1.8',
+                    color: '#4a4a4a',
+                    padding: '28px',
+                    backgroundColor: '#ffffff',
+                    borderRadius: '16px',
+                    boxShadow: '0 8px 24px rgba(149, 157, 165, 0.1)'
+                },
+                heading: {
+                    fontWeight: '600',
+                    margin: '1.3em 0 0.8em',
+                    color: '#2b2b2b',
+                    borderBottom: '3px solid #ffd166',
+                    paddingBottom: '0.3em',
+                    display: 'inline-block'
+                },
+                link: {
+                    color: '#06d6a0',
+                    textDecoration: 'none',
+                    fontWeight: '500'
+                },
+                list: {
+                    paddingLeft: '1.5em',
+                    margin: '0.8em 0',
+                    listStyleType: '✨'
+                }
+            }
+        },
+        coffee: {
+            name: '咖啡时光',
+            styles: {
+                container: {
+                    fontFamily: "'PingFang SC', 'Microsoft YaHei', sans-serif",
+                    lineHeight: '1.9',
+                    color: '#433d3c',
+                    padding: '30px',
+                    backgroundColor: '#f9f5f0',
+                    borderRadius: '12px',
+                    border: '1px solid #e6d5c3'
+                },
+                heading: {
+                    fontWeight: '600',
+                    margin: '1.2em 0 0.8em',
+                    color: '#6f4e37',
+                    textAlign: 'left',
+                    paddingLeft: '1em',
+                    borderLeft: '4px solid #c0a080'
+                },
+                link: {
+                    color: '#8b593e',
+                    textDecoration: 'none',
+                    borderBottom: '1px solid #8b593e'
+                },
+                list: {
+                    paddingLeft: '1.6em',
+                    margin: '0.8em 0',
+                    listStyleType: '☕️'
+                }
+            }
+        },
+        minimal_pink: {
+            name: '粉色简约',
+            styles: {
+                container: {
+                    fontFamily: "'PingFang SC', 'Microsoft YaHei', sans-serif",
+                    lineHeight: '1.75',
+                    color: '#4f4f4f',
+                    padding: '25px',
+                    backgroundColor: '#ffffff',
+                    borderRadius: '12px',
+                    borderTop: '3px solid #ff7eb6'
+                },
+                heading: {
+                    fontWeight: '600',
+                    margin: '1.2em 0 0.8em',
+                    color: '#ff7eb6',
+                    letterSpacing: '0.05em'
+                },
+                link: {
+                    color: '#ff7eb6',
+                    textDecoration: 'none',
+                    borderBottom: '1px solid rgba(255, 126, 182, 0.3)'
+                },
+                list: {
+                    paddingLeft: '1.5em',
+                    margin: '0.8em 0',
+                    listStyleType: '💗'
+                }
+            }
+        },
+        travel: {
+            name: '旅行日记',
+            styles: {
+                container: {
+                    fontFamily: "'PingFang SC', 'Microsoft YaHei', sans-serif",
+                    lineHeight: '1.8',
+                    color: '#2d4059',
+                    padding: '28px',
+                    backgroundColor: '#f8f9fa',
+                    borderRadius: '16px',
+                    border: '1px solid #e9ecef'
+                },
+                heading: {
+                    fontWeight: '600',
+                    margin: '1.3em 0 0.8em',
+                    color: '#3d84a8',
+                    textAlign: 'left',
+                    paddingBottom: '0.3em',
+                    borderBottom: '2px dashed #abedd8'
+                },
+                link: {
+                    color: '#46cdcf',
+                    textDecoration: 'none',
+                    borderBottom: '1px solid rgba(70, 205, 207, 0.3)'
+                },
+                list: {
+                    paddingLeft: '1.6em',
+                    margin: '0.8em 0',
+                    listStyleType: '✈️'
+                }
+            }
         }
     };
 
