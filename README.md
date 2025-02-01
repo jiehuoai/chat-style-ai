@@ -2,7 +2,7 @@
 
 一个优雅的工具，让 AI 对话内容更有温度。将 ChatGPT、Claude 等 AI 助手的回复转换成精美的图片。
 
-[在线预览](https://your-demo-url.com) | [English](./README_EN.md)
+[在线预览](https://chatstyle.jiehuo.ai) | [English](./README_EN.md)
 
 ## ✨ 特性
 

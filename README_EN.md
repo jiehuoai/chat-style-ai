@@ -2,7 +2,7 @@
 
 An elegant tool that adds warmth to AI conversations. Transform responses from ChatGPT, Claude, and other AI assistants into beautiful images.
 
-[Live Demo](https://your-demo-url.com) | [中文](./README.md)
+[Live Demo](https://chatstyle.jiehuo.ai) | [中文](./README.md)
 
 ## ✨ Features
 
