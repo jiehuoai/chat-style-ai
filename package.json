@@ -4,13 +4,10 @@
   "description": "An elegant tool that beautifies AI conversation outputs",
   "scripts": {
     "start": "serve src",
-    "build": "cp -r src/* dist/",
+    "build": "mkdir -p dist && cp -r src/* dist/",
     "dev": "serve src"
   },
   "dependencies": {
     "serve": "^14.0.0"
-  },
-  "devDependencies": {
-    "copyfiles": "^2.4.1"
   }
 } 
