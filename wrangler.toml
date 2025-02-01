@@ -1,0 +1,12 @@
+name = "chatstyle-ai"
+type = "webpack"
+account_id = "your-account-id"
+workers_dev = true
+
+[site]
+bucket = "./dist"
+entry-point = "workers-site"
+
+[build]
+command = "npm run build"
+output_dir = "dist" 

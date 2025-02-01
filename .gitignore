@@ -40,4 +40,7 @@ yarn-error.log*
 *.tgz
 
 # Yarn Integrity file
-.yarn-integrity 
+.yarn-integrity
+
+# New additions from the code block
+*.log 

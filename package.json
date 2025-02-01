@@ -1,12 +1,16 @@
 {
-  "name": "xiaohongshu-md-generator",
+  "name": "chatstyle-ai",
   "version": "1.0.0",
-  "description": "将 Markdown 转换为小红书风格图片的工具",
-  "main": "index.js",
+  "description": "An elegant tool that beautifies AI conversation outputs",
   "scripts": {
-    "start": "serve src"
+    "start": "serve src",
+    "build": "cp -r src/* dist/",
+    "dev": "serve src"
   },
   "dependencies": {
     "serve": "^14.0.0"
+  },
+  "devDependencies": {
+    "copyfiles": "^2.4.1"
   }
 } 

@@ -631,35 +631,117 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     async function generateSingleImage() {
-        const canvas = await html2canvas(preview, {
-            scale: 2,
-            backgroundColor: '#ffffff'
-        });
+        // 保存原始预览内容
+        const originalContent = preview.innerHTML;
         
-        const img = document.createElement('img');
-        img.src = canvas.toDataURL('image/png');
-        img.style.width = '100%';
-        img.style.borderRadius = '8px';
-        preview.innerHTML = '';
-        preview.appendChild(img);
+        try {
+            // 创建一个临时容器，保持和预览完全一样的样式
+            const container = document.createElement('div');
+            container.className = 'bg-white p-6 rounded-lg shadow';
+            container.style.width = `${preview.clientWidth}px`;
+            container.innerHTML = originalContent;
+            
+            // 应用当前选择的主题样式
+            const templateName = templateSelect.value;
+            const template = templates[templateName];
+            applyXiaohongshuStyle(container);
+            
+            // 临时添加到文档中进行渲染
+            document.body.appendChild(container);
+            container.style.position = 'fixed';
+            container.style.left = '-9999px';
+            container.style.top = '0';
+            
+            // 使用更高的 scale 值以获得更清晰的图片
+            const canvas = await html2canvas(container, {
+                scale: 2,
+                backgroundColor: template.styles.container.backgroundColor || '#ffffff',
+                logging: false,
+                useCORS: true,
+                allowTaint: true,
+                width: preview.clientWidth,
+                height: container.offsetHeight
+            });
+            
+            // 创建下载链接
+            const link = document.createElement('a');
+            link.download = `chatstyle-${templateName}-${Date.now()}.png`;
+            link.href = canvas.toDataURL('image/png');
+            
+            // 清理临时元素
+            document.body.removeChild(container);
+            
+            // 触发下载
+            link.click();
+        } catch (error) {
+            console.error('生成图片失败:', error);
+            alert('生成图片失败，请重试');
+        }
     }
 
     async function downloadSplitImages() {
         const images = preview.querySelectorAll('img');
+        const templateName = templateSelect.value;
         
         for (let i = 0; i < images.length; i++) {
             try {
+                // 创建临时容器
+                const container = document.createElement('div');
+                container.className = 'bg-white p-6 rounded-lg shadow';
+                container.style.width = `${preview.clientWidth}px`;
+                
+                // 创建图片容器
+                const imgWrapper = document.createElement('div');
+                imgWrapper.className = 'relative';
+                
+                // 克隆原始图片
+                const img = images[i].cloneNode(true);
+                imgWrapper.appendChild(img);
+                
+                // 添加页码（如果有多页）
+                if (images.length > 1) {
+                    const pageNum = document.createElement('div');
+                    pageNum.className = 'absolute bottom-2 right-2 bg-black bg-opacity-50 text-white px-2 py-1 rounded';
+                    pageNum.textContent = `${i + 1}/${images.length}`;
+                    imgWrapper.appendChild(pageNum);
+                }
+                
+                container.appendChild(imgWrapper);
+                
+                // 应用主题样式
+                applyXiaohongshuStyle(container);
+                
+                // 临时添加到文档中进行渲染
+                document.body.appendChild(container);
+                container.style.position = 'fixed';
+                container.style.left = '-9999px';
+                container.style.top = '0';
+                
+                // 生成图片
+                const canvas = await html2canvas(container, {
+                    scale: 2,
+                    backgroundColor: templates[templateName].styles.container.backgroundColor || '#ffffff',
+                    logging: false,
+                    useCORS: true,
+                    allowTaint: true
+                });
+                
+                // 创建下载链接
                 const link = document.createElement('a');
-                link.download = `xiaohongshu-style-image-${i + 1}.png`;
-                link.href = images[i].src;
-                document.body.appendChild(link);
+                link.download = `chatstyle-${templateName}-${i + 1}-${Date.now()}.png`;
+                link.href = canvas.toDataURL('image/png');
+                
+                // 清理临时元素
+                document.body.removeChild(container);
+                
+                // 触发下载
                 link.click();
-                document.body.removeChild(link);
                 
                 // 添加延迟以避免浏览器下载限制
                 await new Promise(resolve => setTimeout(resolve, 500));
             } catch (error) {
                 console.error('下载图片失败:', error);
+                alert(`下载第 ${i + 1} 张图片失败，请重试`);
             }
         }
     }
