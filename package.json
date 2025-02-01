@@ -1,0 +1,12 @@
+{
+  "name": "xiaohongshu-md-generator",
+  "version": "1.0.0",
+  "description": "将 Markdown 转换为小红书风格图片的工具",
+  "main": "index.js",
+  "scripts": {
+    "start": "serve src"
+  },
+  "dependencies": {
+    "serve": "^14.0.0"
+  }
+} 

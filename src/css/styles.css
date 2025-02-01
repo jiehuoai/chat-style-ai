@@ -1,0 +1,50 @@
+/* 自定义样式 */
+.xiaohongshu-preview {
+    font-family: 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+    line-height: 1.8;
+    color: #333;
+    padding: 20px;
+}
+
+.xiaohongshu-preview img {
+    max-width: 100%;
+    border-radius: 8px;
+    margin: 10px 0;
+}
+
+.xiaohongshu-preview blockquote {
+    border-left: 3px solid #ff2442;
+    padding-left: 1em;
+    color: #666;
+    margin: 1em 0;
+}
+
+.xiaohongshu-preview code {
+    background-color: #f5f5f5;
+    padding: 0.2em 0.4em;
+    border-radius: 3px;
+    font-family: monospace;
+}
+
+.split-preview-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.split-preview-page {
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.page-number {
+    position: absolute;
+    bottom: 8px;
+    right: 8px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+} 

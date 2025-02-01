@@ -1,0 +1,3 @@
+mkdir xiaohongshu-md-generator
+cd xiaohongshu-md-generator
+npm init -y 

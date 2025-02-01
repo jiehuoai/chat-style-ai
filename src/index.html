@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Markdown to Xiaohongshu Style Image Generator</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+</head>
+<body class="bg-gray-100">
+    <div class="container mx-auto px-4 py-8">
+        <h1 class="text-3xl font-bold text-center mb-8">Markdown to 小红书图片生成器</h1>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <!-- Markdown 输入区域 -->
+            <div class="bg-white p-4 rounded-lg shadow">
+                <h2 class="text-xl font-semibold mb-4">Markdown 输入</h2>
+                <textarea 
+                    id="markdown-input" 
+                    class="w-full h-96 p-4 border rounded-lg"
+                    placeholder="在这里输入 Markdown 格式的文本..."></textarea>
+                
+                <div class="mb-4">
+                    <label class="flex items-center">
+                        <input type="checkbox" id="split-image" class="mr-2">
+                        <span>自动分割长图（超过1000px高度）</span>
+                    </label>
+                    <input 
+                        type="number" 
+                        id="split-height" 
+                        class="mt-2 p-2 border rounded w-32" 
+                        value="1000" 
+                        min="500"
+                        max="2000"
+                        placeholder="分割高度">
+                </div>
+
+                <div class="mt-4 space-x-4">
+                    <button id="generate-btn" class="bg-pink-500 text-white px-6 py-2 rounded-lg hover:bg-pink-600">
+                        生成图片
+                    </button>
+                    <button id="download-btn" class="bg-blue-500 text-white px-6 py-2 rounded-lg hover:bg-blue-600">
+                        下载图片
+                    </button>
+                </div>
+            </div>
+
+            <!-- 预览区域 -->
+            <div class="bg-white p-4 rounded-lg shadow">
+                <h2 class="text-xl font-semibold mb-4">预览</h2>
+                <div id="preview" class="bg-white p-6 rounded-lg shadow min-h-[24rem]"></div>
+            </div>
+        </div>
+    </div>
+    <script src="js/main.js"></script>
+</body>
+</html> 
