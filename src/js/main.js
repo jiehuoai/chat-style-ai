@@ -127,6 +127,159 @@ document.addEventListener('DOMContentLoaded', function() {
                     margin: '0.8em 0'
                 }
             }
+        },
+        minimalist: {
+            name: '极简白',
+            styles: {
+                container: {
+                    fontFamily: "'Helvetica Neue', Arial, sans-serif",
+                    lineHeight: '1.7',
+                    color: '#2c3e50',
+                    padding: '28px',
+                    backgroundColor: '#ffffff',
+                    maxWidth: '100%'
+                },
+                heading: {
+                    fontWeight: '500',
+                    margin: '1.5em 0 1em',
+                    color: '#000',
+                    letterSpacing: '-0.03em'
+                },
+                link: {
+                    color: '#3498db',
+                    textDecoration: 'none',
+                    borderBottom: '1px solid #3498db'
+                },
+                list: {
+                    paddingLeft: '1.2em',
+                    margin: '0.8em 0',
+                    color: '#34495e'
+                }
+            }
+        },
+        retro: {
+            name: '复古风',
+            styles: {
+                container: {
+                    fontFamily: "'Times New Roman', serif",
+                    lineHeight: '1.8',
+                    color: '#2c1810',
+                    padding: '32px',
+                    backgroundColor: '#f8f3e9',
+                    borderRadius: '8px',
+                    boxShadow: '0 0 20px rgba(0,0,0,0.1)'
+                },
+                heading: {
+                    fontFamily: "'Georgia', serif",
+                    fontWeight: 'bold',
+                    margin: '1.2em 0 0.8em',
+                    color: '#4a3728',
+                    textTransform: 'uppercase',
+                    letterSpacing: '0.05em'
+                },
+                link: {
+                    color: '#8b4513',
+                    textDecoration: 'none',
+                    borderBottom: '2px solid #8b4513'
+                },
+                list: {
+                    paddingLeft: '2em',
+                    margin: '1em 0',
+                    listStyleType: 'circle'
+                }
+            }
+        },
+        tech: {
+            name: '科技感',
+            styles: {
+                container: {
+                    fontFamily: "'JetBrains Mono', 'Fira Code', monospace",
+                    lineHeight: '1.6',
+                    color: '#e0e0e0',
+                    padding: '24px',
+                    backgroundColor: '#1e1e1e',
+                    borderRadius: '8px',
+                    border: '1px solid #333'
+                },
+                heading: {
+                    fontWeight: '600',
+                    margin: '1em 0 0.8em',
+                    color: '#61afef',
+                    borderBottom: '1px solid #333',
+                    paddingBottom: '0.3em'
+                },
+                link: {
+                    color: '#98c379',
+                    textDecoration: 'none',
+                    borderBottom: '1px dashed #98c379'
+                },
+                list: {
+                    paddingLeft: '1.5em',
+                    margin: '0.8em 0',
+                    color: '#abb2bf'
+                }
+            }
+        },
+        nature: {
+            name: '自然风',
+            styles: {
+                container: {
+                    fontFamily: "'Segoe UI', system-ui, sans-serif",
+                    lineHeight: '1.8',
+                    color: '#2d3436',
+                    padding: '28px',
+                    backgroundColor: '#f0f7f4',
+                    borderRadius: '12px',
+                    border: '1px solid #a8e6cf'
+                },
+                heading: {
+                    fontWeight: '600',
+                    margin: '1.2em 0 0.8em',
+                    color: '#2d6a4f',
+                    paddingLeft: '0.5em',
+                    borderLeft: '4px solid #a8e6cf'
+                },
+                link: {
+                    color: '#40916c',
+                    textDecoration: 'none',
+                    borderBottom: '2px solid rgba(64, 145, 108, 0.3)'
+                },
+                list: {
+                    paddingLeft: '1.6em',
+                    margin: '0.8em 0',
+                    listStyleType: 'disc'
+                }
+            }
+        },
+        handwritten: {
+            name: '手写风',
+            styles: {
+                container: {
+                    fontFamily: "'Comic Sans MS', 'Segoe Print', cursive",
+                    lineHeight: '1.8',
+                    color: '#333',
+                    padding: '30px',
+                    backgroundColor: '#fffdf7',
+                    borderRadius: '8px',
+                    boxShadow: '0 4px 6px rgba(0,0,0,0.1)'
+                },
+                heading: {
+                    fontWeight: 'bold',
+                    margin: '1.2em 0 0.8em',
+                    color: '#ff6b6b',
+                    textDecoration: 'underline wavy #ff6b6b'
+                },
+                link: {
+                    color: '#4ecdc4',
+                    textDecoration: 'none',
+                    borderBottom: '2px dashed #4ecdc4'
+                },
+                list: {
+                    paddingLeft: '2em',
+                    margin: '1em 0',
+                    listStyleType: 'square'
+                }
+            }
         }
     };
 
